@@ -1,3 +1,10 @@
-export const App = () => {
-  return <div>React homework template</div>;
-};
+import { Reader } from './Reader/Reader';
+import publications from './publications.json';
+
+export function App() {
+  return (
+    <>
+      <Reader items={publications} />
+    </>
+  );
+}
