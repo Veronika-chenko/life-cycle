@@ -22,7 +22,6 @@ export class Reader extends Component {
   }
 
   componentDidUpdate(_, prevState) {
-    //prevProps, prevState
     if (prevState.index !== this.state.index) {
       localStorage.setItem(LS_KEY, this.state.index);
     }
@@ -42,7 +41,7 @@ export class Reader extends Component {
           onChange={this.changeIndex}
         />
         <Progress current={index + 1} total={totalItems} />
-        <Publication items={currentItem} />
+        <Publication item={currentItem} />
       </>
     );
   }
@@ -74,3 +73,5 @@ export class Reader extends Component {
 //       this.setState({ index: Number(savedState) });
 //     }
 //   }
+
+// (_, prevState) instead of (prevProps, prevState)

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export function Controls({ currentItem, totalItems, onChange }) {
   return (
     <section>
@@ -18,3 +20,9 @@ export function Controls({ currentItem, totalItems, onChange }) {
     </section>
   );
 }
+
+Controls.propTypes = {
+  currentItem: PropTypes.number.isRequired,
+  totalItems: PropTypes.number.isRequired,
+  onChange: PropTypes.func.isRequired,
+};
